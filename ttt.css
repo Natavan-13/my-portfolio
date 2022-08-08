@@ -1,0 +1,39 @@
+@media screen and (min-width: 1051px){
+	body{
+		background-size: 60% 100%;
+	}
+	#btns{
+		margin-left:30%;
+		margin-top: 8%;
+	}
+}
+@media screen and (min-width: 601px) and (max-width: 1050px){
+	body{
+		background-size: 90% 100%;
+	}
+	#btns{
+		margin-left:40%;
+		margin-top: 8%;
+	}
+}
+@media screen and (min-width: 601px){
+	#h1{
+		font-family: 'Lobster', cursive; color: ;
+		font-size: 55px;
+		text-align: center;
+		/*margin-left: 50px; background-color: rgba(234, 247, 236, 0.59);*/
+	}
+	button{
+       
+        height: 80px; 
+        width: 80px;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+	body{
+		background-image: url('images/ttt.png'); 
+		background-attachment: fixed; 
+		background-repeat: no-repeat;  
+	}
+	
+}

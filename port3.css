@@ -1,0 +1,86 @@
+li{
+cursor: pointer;
+background-color: ;
+}
+.icon-bar{
+background: orange;
+}
+
+@media screen and (min-width: 601px) {
+   body{
+    background-size: 100% 27%;
+   }
+  #p1 {
+    font-size: 75px;
+	width: 50%;
+	margin-left: 25%;
+  }
+  #p2 {  
+    font-size: 23px;
+	width: 50%;
+	margin-left: 25%
+  } 
+   #pics{
+	   text-align: center;
+   }
+     #link1,#link2,#link3{
+	   cursor: pointer;
+   }
+  
+}
+@media screen and (min-width: 1201px) {
+	#img1{
+    height: 60%;
+	width: 40%;
+  }
+  #img2{
+    width: 100%;
+	height: 28%;
+  }
+  
+}
+@media screen and (min-width: 601px) and (max-width: 1200px){
+	#img1{
+    height: 45%;
+	width: 40%;
+  }
+  #img2{
+    width: 100%;
+	height: 28%;
+  }
+ 
+}
+
+@media screen and (max-width: 600px) {
+   body{
+    background-size: 100% 17%;
+   }
+  #p1 {
+    font-size: 60px;
+	width: 60%;
+	margin-left: 20%;
+  }
+  #p2 {  
+    font-size: 15px;
+	width: 80%;
+	margin-left: 10%
+  }
+  #img1{
+    height: 70%;
+	width: 40%;
+  }
+  #img2{
+  width: 100%;
+    height: 200px;
+  }
+  #pics{
+	   text-align: center;
+   }
+   #link1,#link2,#link3{
+	   height: 30px;
+	   width: 30px;
+	   cursor: pointer;
+   }
+  
+ 
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>  
+<html>  
+<head> 
+<title>TicTacToe</title>
+
+<link rel = "stylesheet" type = "text/css" href = "ttt.css" >
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+
+<script type = "text/javascript">
+var x = 0;
+var y = 0;
+var z = 0;
+var n = 0;
+var m = 0;
+var ar = new Array();
+var arr = new Array();
+var ar1 = new Array("11b","12b","13b");
+var ar2 = new Array("21b","22b","23b");
+var ar3 = new Array("31b","32b","33b");
+var ar4 = new Array("11b","21b","31b");
+var ar5 = new Array("12b","22b","32b");
+var ar6 = new Array("13b","23b","33b");
+var ar7 = new Array("11b","22b","33b");
+var ar8 = new Array("13b","22b","31b");
+
+function abc(a){
+//alert(a);
+if(ar.includes(a) == true || arr.includes(a) == true ){
+alert("This cell is filled"); 
+}
+else{
+x++;
+if(x%2 == 0){
+ar[y] = a;
+y++;
+document.getElementById(a).innerHTML = "<img src='images/rec.png' height = '50' width = '50'/>";
+asz();
+//alert(x);
+
+}
+else{
+arr[n] = a;
+n++;
+document.getElementById(a).innerHTML = "<img src='images/close.png' height = '50' width = '50'/>";
+asm();
+//alert(x);
+}
+}
+}
+
+
+function asz(){
+for(i=0; i<3; i++){
+if(ar.includes(ar1[i])){
+z++;
+//alert(z);
+if(z==3){
+alert("You won");
+break;
+}
+}
+else{
+z=0;
+break;
+}
+}
+
+for(i=0; i<3; i++){
+if(ar.includes(ar2[i])){
+z++;
+//alert(z);
+if(z==3){
+alert("You won");
+break;
+}
+}
+else{
+z=0;
+break;
+}
+}
+
+for(i=0; i<3; i++){
+if(ar.includes(ar3[i])){
+z++;
+//alert(z);
+if(z==3){
+alert("You won");
+break;
+}
+}
+else{
+z=0;
+break;
+}
+}
+
+for(i=0; i<3; i++){
+if(ar.includes(ar4[i])){
+z++;
+//alert(z);
+if(z==3){
+alert("You won");
+break;
+}
+}
+else{
+z=0;
+break;
+}
+}
+
+for(i=0; i<3; i++){
+if(ar.includes(ar5[i])){
+z++;
+//alert(z);
+if(z==3){
+alert("You won");
+break;
+}
+}
+else{
+z=0;
+break;
+}
+}
+
+for(i=0; i<3; i++){
+if(ar.includes(ar6[i])){
+z++;
+//alert(z);
+if(z==3){
+alert("You won");
+break;
+}
+}
+else{
+z=0;
+break;
+}
+}
+
+for(i=0; i<3; i++){
+if(ar.includes(ar7[i])){
+z++;
+//alert(z);
+if(z==3){
+alert("You won");
+break;
+}
+}
+else{
+z=0;
+break;
+}
+}
+ 
+for(i=0; i<3; i++){
+if(ar.includes(ar8[i])){
+z++;
+//alert(z);
+if(z==3){
+alert("You won");
+break;
+}
+}
+else{
+z=0;
+break;
+}
+}
+}
+
+function asm(){
+
+for(i=0; i<3; i++){
+if(arr.includes(ar1[i])){
+m++;
+//alert(m);
+if(m==3){
+alert("You won");
+break;
+}
+}
+else{
+m=0;
+break;
+}
+}
+
+for(i=0; i<3; i++){
+if(arr.includes(ar2[i])){
+m++;
+//alert(m);
+if(m==3){
+alert("You won");
+break;
+}
+}
+else{
+m=0;
+break;
+
+}
+}
+
+for(i=0; i<3; i++){
+if(arr.includes(ar3[i])){
+m++;
+//alert(m);
+if(m==3){
+alert("You won");
+break;
+}
+}
+else{
+m=0;
+break;
+}
+}
+
+for(i=0; i<3; i++){
+if(arr.includes(ar4[i])){
+m++;
+if(m==3){
+//alert(m);
+alert("You won");
+break;
+}
+}
+else{
+m=0;
+break;
+}
+}
+
+for(i=0; i<3; i++){
+if(arr.includes(ar5[i])){
+m++;
+if(m==3){
+//alert(m);
+alert("You won");
+break;
+}
+}
+else{
+m=0;
+break;
+
+}
+}
+
+for(i=0; i<3; i++){
+if(arr.includes(ar6[i])){
+m++;
+if(m==3){
+//alert(m);
+alert("You won");
+break;
+}
+}
+else{
+m=0;
+break;
+}
+}
+
+for(i=0; i<3; i++){
+if(arr.includes(ar7[i])){
+m++;
+if(m==3){
+//alert(m);
+alert("You won");
+break;
+}
+}
+else{
+m=0;
+break;
+}
+}
+ 
+for(i=0; i<3; i++){
+if(arr.includes(ar8[i])){
+m++;
+//alert(m);
+if(m==3){
+alert("You won");
+break;
+}
+}
+else{
+m=0;
+break;
+
+}
+}
+}
+</script>
+
+<style>
+
+</style>
+</head>
+<body style = "">
+
+<!--img src = "images/tic-tac-toe.png" height = "45" width = "50" style = "position: absolute;" /-->
+<h1 id = "h1" style = "">TicTacToe</h1>
+
+
+
+
+<div id = "btns"style = "">
+<div class = "flex-container" >
+<button id = "11b" class="btn btn-info" class = "flex-item" onclick = "abc('11b')" style = "background-color: rgba(234, 247, 236, 0.59)"></button> 
+<button id = "12b" class="btn btn-info" class = "flex-item" onclick = "abc('12b')" style = "background-color: rgba(234, 247, 236, 0.59)"></button>  
+<button id = "13b" class="btn btn-info" class = "flex-item" onclick = "abc('13b')" style = "background-color: rgba(234, 247, 236, 0.59)"></button>  
+</div>
+<div class = "flex-container">
+<button id = "21b" class="btn btn-info" class = "flex-item" onclick = "abc('21b')" style = "background-color: rgba(234, 247, 236, 0.59)"></button> 
+<button id = "22b" class="btn btn-info" class = "flex-item" onclick = "abc('22b')" style = "background-color: rgba(234, 247, 236, 0.59)"></button>  
+<button id = "23b" class="btn btn-info" class = "flex-item" onclick = "abc('23b')" style = "background-color: rgba(234, 247, 236, 0.59)"></button>  
+</div>
+<div class = "flex-container">
+<button id = "31b" class="btn btn-info" class = "flex-item" onclick = "abc('31b')" style = "background-color: rgba(234, 247, 236, 0.59)"></button> 
+<button id = "32b" class="btn btn-info" class = "flex-item" onclick = "abc('32b')" style = "background-color: rgba(234, 247, 236, 0.59)"></button>  
+<button id = "33b" class="btn btn-info" class = "flex-item" onclick = "abc('33b')" style = "background-color: rgba(234, 247, 236, 0.59)"></button>  
+</div>
+</div>
+
+</body>
+
+</html>

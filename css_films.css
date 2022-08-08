@@ -1,0 +1,55 @@
+body{
+	
+	background-color: black;
+}
+
+@media screen and (min-width: 801px){
+.inception,#d{
+	padding-top: 60%;
+	
+}
+.header{
+    font-size: 85px;
+}
+}
+@media screen and (min-width: 601px) and (max-width: 800px){
+.inception,#d{
+	padding-top: 90%;
+	
+}
+.header{
+    font-size: 65px;
+}	
+}
+@media screen and (min-width: 601px){
+.header{
+	position: absolute;
+	color: white;
+	left: 45%;
+	top: 10%;
+}
+
+#image{
+	position: absolute;
+	top: 3%;
+	height: 45%;/*height: 40%;*/
+	width: 45%;
+	left: 7%;
+}
+
+#image1{
+	position: absolute;
+	top: 49%;
+	width: 45%;
+	height: 45%;
+	left: 7%;
+}
+
+
+.inception,.interstellar,.darknight,.greenmile,.forrestgump,.revenant,.imitationgame,.shawshank,.schindler,.parasite{
+	
+	padding-left: 10%;
+	
+}
+}
+

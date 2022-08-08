@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zoopark</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&display=swap" rel="stylesheet"> 
+<script type = "text/javascript">
+var x;
+var y;
+var a;
+var b;
+var c;
+var d;
+var uni;
+var bird;
+var snake;
+var dog;
+
+class AnimalInfo{
+constructor(area,type){
+this.area =area;
+this.type =type;
+}
+eat(){
+return this.type + " are eating. ";
+} 
+}
+/**/
+class Dog extends AnimalInfo{
+constructor(name,age,height,color){
+super("land","Mammals");
+this.name = name;
+this.age = age;
+this.height = height;
+this.color = color;
+}
+barking(){
+return this.name + " barks at any person.";
+}
+}
+
+class Snake extends AnimalInfo{
+constructor(name,age,height,color){
+super("water","Reptiles");
+this.name = name;
+this.age = age;
+this.height = height;
+this.color = color;
+}
+poison(){
+return this.name + " use poison for killing prey.";
+}
+}
+
+class Birds extends AnimalInfo{
+constructor(name,age,height,color){
+super("sky","Birds");
+this.name = name;
+this.age = age;
+this.height = height;
+this.color = color;
+}
+
+flying(){
+return this.name + " are flying in the " + this.area+"."; 
+}
+}
+
+
+function properties(){
+
+
+x = document.getElementById('type').value;
+y = document.getElementById('area').value;
+a = document.getElementById('name').value;
+b = document.getElementById('age').value;
+c = document.getElementById('height').value;
+d = document.getElementById('color').value;
+
+uni = new AnimalInfo(y,x);
+dog = new Dog(a,b,c,d);
+bird = new Birds(a,b,c,d);  
+snake = new Snake(a,b,c,d);
+ 
+ switch(uni.type){ 
+ 
+ case bird.type:
+	alert(bird.eat() + bird.flying());
+	document.getElementById("tabl").insertRow(-1).innerHTML = '<td><b>'+bird.name+'</b></td><td>'+bird.age+'</td><td>'+bird.height+'</td><td>'+bird.color+'</td>';  
+    break;
+ case snake.type:
+	alert(snake.eat() + snake.poison());
+	document.getElementById("tabl").insertRow(-1).innerHTML = '<td><b>'+snake.name+'</b></td><td>'+snake.age+'</td><td>'+snake.height+'</td><td>'+snake.color+'</td>';  
+    break;
+ case dog.type:
+	alert(dog.eat() + dog.barking());
+	document.getElementById("tabl").insertRow(-1).innerHTML = '<td><b>'+dog.name+'</b></td><td>'+dog.age+'</td><td>'+dog.height+'</td><td>'+dog.color+'</td>';  
+    break;
+	default:;
+ }
+ 
+ 
+} 
+
+</script> 
+
+<style>
+table,th,td{
+border-style: solid;
+border-width: 2px;
+}
+
+
+@media screen and (min-width: 601px){
+body{
+background-size: 50% 100%;
+background-color: #F0C0A8;
+}
+.all{
+margin-left: 55%;
+}
+th,td{
+padding: 5px;
+width: 100px;
+height: 30px;
+text-align: center;
+}
+#zoo,#park{
+ font-size: 75px; 
+ font-family: 'Noto Serif Display', serif;
+}
+#zoo{
+color: white;
+;
+}
+#park{
+color: #710202;
+padding-left: 2%;
+}
+}
+</style>
+</head>
+<body style = "background-image: url('images/zoo6.jpg'); background-attachment: fixed;  background-repeat: no-repeat;  ">
+<br/>
+
+<div style = "text-align: center;">
+<span style = "background-color: #; width:140px; height: 30px; " id = "zoo">ZOO</span>
+
+
+<span style = "background-color: ; width:140px; height: 30px;" id = "park">PARK</span>
+</div>
+
+<div class = "all"><br/><br/><br/>
+
+<form style="width:300px">  
+  <div class="form-group">  
+  <div class="form-group">  
+    <label for="name">Area</label>  
+    <input type="text" class="form-control" id="area" placeholder="Area">  
+  </div>
+    <label for="type">Type</label>  
+    <input type="text" class="form-control" id="type" placeholder="Type of animal">  
+  </div> 
+    <div class="form-group">  
+    <label for="color">Name</label>  
+    <input type="text" class="form-control" id="name" placeholder="Name of animal">  
+  </div>  
+  <div class="form-group">  
+    <label for="age">Age</label>  
+    <input type="text" class="form-control" id="age" placeholder="Age of animal">  
+  </div>  
+  <div class="form-group">  
+    <label for="height">Height</label>  
+    <input type="text" class="form-control" id="height" placeholder="Height of animal">  
+  </div>  
+  <div class="form-group">  
+    <label for="color">Color</label>  
+    <input type="text" class="form-control" id="color" placeholder="Color of animal">  
+  </div>  
+     
+</form>
+
+<button type="button" id = "button1" class="btn btn-info"  style = "background-color: #710202; border-color: #710202" onclick = "properties()">Create</button>  
+<br/><br/><br/><br/>
+<table id = "tabl">
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Height</th>
+<th>Color</th>
+</tr>
+</table>
+<br/><br/>
+</div>
+</body>
+</html>
